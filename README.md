@@ -6,4 +6,4 @@ Esse programa de aceleração conta com o apoio da empresa [Stone](https://www.s
 
 Para acessar os desafios, basta clicar no link correspondente abaixo:
 
-[Modulo I](modulo-I/README.md)
+[Modulo I](modulo-I)
