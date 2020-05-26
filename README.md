@@ -6,5 +6,5 @@ Esse programa de aceleração conta com o apoio da empresa [Stone](https://www.s
 
 Para acessar os desafios, basta clicar no link correspondente abaixo:
 
-[:heavy_check_mark: Módulo I](modulo-I)
-[:heavy_check_mark: Módulo II](modulo-II)
+1. [:heavy_check_mark: Módulo I](modulo-I)
+1. [:heavy_check_mark: Módulo II](modulo-II)
