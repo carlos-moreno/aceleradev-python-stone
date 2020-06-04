@@ -9,3 +9,4 @@ Para acessar os desafios, basta clicar no link correspondente abaixo:
 1. [:heavy_check_mark: Módulo I](modulo-I)
 1. [:heavy_check_mark: Módulo II](modulo-II)
 1. [:heavy_check_mark: Módulo III](modulo-III)
+1. [:heavy_check_mark: Módulo III](modulo-IV)
