@@ -1,5 +1,9 @@
 # Codenation AceleraDev Python - Stone
 
+[![Python 3](https://pyup.io/repos/github/carlos-moreno/aceleradev-python-stone/python-3-shield.svg)](https://pyup.io/repos/github/carlos-moreno/aceleradev-python-stone/)
+[![Updates](https://pyup.io/repos/github/carlos-moreno/aceleradev-python-stone/shield.svg)](https://pyup.io/repos/github/carlos-moreno/aceleradev-python-stone/)
+
+
 Programa de aceleração em programação utilizando a linguagem de programação Python.
 
 Esse programa de aceleração conta com o apoio da empresa [Stone](https://www.stone.com.br/)
