@@ -31,12 +31,12 @@ Para resolver este desafio faça os passos abaixo:
 - Crie um projeto base com Django para testar as validações e o funcionamento da implementação.
 
 ```console
-	django-admin startproject datadesign
-	cd datadesign
-	django-admin startapp api
-	python manage.py migrate
-    python manage.py createsuperuser
-	python manage.py runserver
+django-admin startproject datadesign
+cd datadesign
+django-admin startapp api
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
 ```
 
 Agora acesse http://127.0.0.1:8000/admin use o usuário criado no
@@ -45,9 +45,10 @@ processo para acessar a página de administração do Django.
 - Implemente os models.py conforme a modelagem de dados. (*datadesign/api/models.py*)
 - Rode o comando para criar as migrations.
 
-    python manage.py makemigrations
-    python manage.py migrate
-
+```console
+python manage.py makemigrations
+python manage.py migrate
+```
 
 A implementação deve ser feita e no arquivo **api/models.py** ,
 copie o conteúdo do models do seu projeto para o diretório api.
