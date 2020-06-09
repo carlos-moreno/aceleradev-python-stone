@@ -10,7 +10,7 @@ Django==3.0.7
 idna==2.9
 more-itertools==4.2.0
 pathspec==0.8.0
-pluggy==0.6.0
+pluggy==0.13.1
 py==1.5.3
 PyJWT==1.7.1
 pytest==3.6.2
