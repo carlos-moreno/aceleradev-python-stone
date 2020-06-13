@@ -1,8 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.core.validators import (
-    EmailValidator,
     MinLengthValidator,
-    validate_ipv4_address,
 )
 from django.db import models
 
@@ -17,7 +15,7 @@ def validate_level(level_value):
 class User(models.Model):
     name = models.CharField("nome", max_length=50)
     last_login = models.DateTimeField("último login", auto_now=True)
-    email = models.EmailField("e-mail", max_length=254, validators=[EmailValidator])
+    email = models.EmailField("e-mail")
     password = models.CharField(
         "senha",
         max_length=50,
@@ -36,9 +34,7 @@ class Agent(models.Model):
     status = models.BooleanField()
     env = models.CharField(max_length=20)
     version = models.CharField("versão", max_length=5)
-    address = models.GenericIPAddressField(
-        "endereço", max_length=39, validators=[validate_ipv4_address]
-    )
+    address = models.GenericIPAddressField("endereço", protocol="IPv4")
 
     class Meta:
         db_table = "agent"
@@ -48,9 +44,9 @@ class Agent(models.Model):
 
 
 class Event(models.Model):
-    level = models.CharField(
-        "nível", max_length=20, validators=[validate_level]
-    )
+    LEVELS = [(level, level) for level in ['CRITICAL', 'DEBUG', 'ERROR', 'WARNING', 'INFO']]
+
+    level = models.CharField("nível", max_length=20, choices=LEVELS, validators=[validate_level])
     data = models.TextField()
     arquivado = models.BooleanField()
     date = models.DateField(auto_now_add=True)
