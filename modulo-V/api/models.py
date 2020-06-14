@@ -1,15 +1,7 @@
-from django.core.exceptions import ValidationError
 from django.core.validators import (
     MinLengthValidator,
 )
 from django.db import models
-
-
-def validate_level(level_value):
-    if level_value not in ["CRITICAL", "DEBUG", "ERROR", "WARNING", "INFO"]:
-        raise ValidationError(
-            f"{level_value} not a valid level.", params={"level_value": level_value}
-        )
 
 
 class User(models.Model):
@@ -31,8 +23,8 @@ class User(models.Model):
 
 class Agent(models.Model):
     name = models.CharField("nome", max_length=50)
-    status = models.BooleanField()
-    env = models.CharField(max_length=20)
+    status = models.BooleanField(default=False)
+    env = models.CharField("ambiente", max_length=20)
     version = models.CharField("versão", max_length=5)
     address = models.GenericIPAddressField("endereço", protocol="IPv4")
 
@@ -46,10 +38,10 @@ class Agent(models.Model):
 class Event(models.Model):
     LEVELS = [(level, level) for level in ['CRITICAL', 'DEBUG', 'ERROR', 'WARNING', 'INFO']]
 
-    level = models.CharField("nível", max_length=20, choices=LEVELS, validators=[validate_level])
-    data = models.TextField()
-    arquivado = models.BooleanField()
-    date = models.DateField(auto_now_add=True)
+    level = models.CharField("nível", max_length=20, choices=LEVELS)
+    data = models.TextField("dados")
+    arquivado = models.BooleanField(default=False)
+    date = models.DateField("data de criação", auto_now_add=True)
     agent = models.ForeignKey(Agent, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
