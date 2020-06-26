@@ -25,7 +25,7 @@ def get_all_debug_events() -> Event:
 
 def get_all_critical_events_by_user(agent) -> Event:
     """Traga todos os eventos do tipo critico de um usuário específico"""
-    return Event.objects.filter(agent=agent)
+    return Event.objects.filter(level='critical', agent=agent)
 
 
 def get_all_agents_by_user(username) -> Agent:

@@ -74,7 +74,7 @@ class TestChallenge10(TestCase):
         users = get_all_critical_events_by_user(agent)
         self.assertEqual(
             users.count(),
-           1
+            1
         )
 
     def test_6(self):
