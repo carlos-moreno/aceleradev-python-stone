@@ -10,7 +10,7 @@ def get_active_users() -> User:
 
 def get_amount_users() -> User:
     """Retorne a quantidade total de usuarios do sistema """
-    return User.objects.all().count()
+    return User.objects.count()
 
 
 def get_admin_users() -> User:
