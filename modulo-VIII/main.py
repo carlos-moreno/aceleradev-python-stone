@@ -166,13 +166,17 @@ types:
           password: string
     responses: 
       201:
-        body: 
+        body:
           application/json:
-            description: Token gerado
+            example: {
+                      "token": "token gerado"
+                     }
       400:
-        body: 
+        body:
           application/json:
-            description: Token expirado
+            example: {
+                      "message": "Token expirado."
+                     }
 /agents:
   description: Agents endpoint.
   get:
@@ -196,12 +200,6 @@ types:
           application/json:
             example: {
                       "message": "UnauthorizedError."
-                     }
-      404:
-        body:
-          application/json:
-            example: {
-                      "message": "Not found."
                      }
   post:
     description: Add a new agent.
@@ -334,14 +332,16 @@ types:
             type: Event[]
         401:
           body:
-            type: Response
-            example:
-              mensagem: Unauthorized
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
     post:
       description: Add a new event.
       securedBy: JWT
@@ -361,14 +361,16 @@ types:
               mensagem: Created
         401:
           body:
-            type: Response
-            example:
-              mensagem: Unauthorized
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
     put:
       description: Updates an already created event.
       securedBy: JWT
@@ -381,28 +383,32 @@ types:
               mensagem: Created
         401:
           body:
-            type: Response
-            example:
-              mensagem: Unauthorized
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
       responses:
         200:
           body:
             type: Event
         401:
           body:
-            type: Response
-            example:
-              mensagem: Unauthorized
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request 
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
     delete:
       description: Deletes the event.
       securedBy: JWT
@@ -418,14 +424,16 @@ types:
               mensagem: Created
         401:
           body:
-            type: Response
-            example:
-              mensagem: Unauthorized
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
       responses:
         200:
           body:
@@ -434,14 +442,16 @@ types:
               mensagem: Created
         401:
           body:
-            type: Response
-            example:
-              mensagem: Unauthorized
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
 /groups:
   description: Groups endpoint.
   get:
@@ -453,9 +463,10 @@ types:
           type: Group[]
       401:
         body:
-          type: Response
-          example:
-            mensagem: Não encontrado
+          application/json:
+            example: {
+                      "message": "UnauthorizedError."
+                     }
   post:
     description: Add a new group.
     securedBy: JWT
@@ -476,9 +487,16 @@ types:
           type: Group
       401:
         body:
-          type: Response
-          example:
-            mensagem: Solicitação inválida
+          application/json:
+            example: {
+                      "message": "UnauthorizedError."
+                     }
+      404:
+        body:
+          application/json:
+            example: {
+                      "message": "Not found."
+                     }
   /{id}:
     uriParameters:
       id:
@@ -493,14 +511,16 @@ types:
             type: Group[]
         401:
           body:
-            type: Response
-            example:
-              mensagem: Não encontrado
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
     put:
       description: Updates an already created group.
       securedBy: JWT
@@ -513,28 +533,32 @@ types:
               mensagem: Created
         401:
           body:
-            type: Response
-            example:
-              mensagem: Unauthorized
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
       responses:
         200:
           body:
             type: Group
         401:
           body:
-            type: Response
-            example:
-              mensagem: Solicitação inválida
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
     delete:
       description: Deletes the group.
       securedBy: JWT
@@ -546,19 +570,22 @@ types:
               mensagem: Excluído com sucesso
         400:
           body:
-            type: Response
-            example:
-              mensagem: Solicitação inválida
+            application/json:
+              example: {
+                        "message": "Bad request."
+                       }
         401:
           body:
-            type: Response
-            example:
-              mensagem: Solicitação inválida
+            application/json:
+              example: {
+                        "message": "UnauthorizedError."
+                       }
         404:
           body:
-            type: Response
-            example:
-              mensagem: Bad Request
+            application/json:
+              example: {
+                        "message": "Not found."
+                       }
 /users:
   description: Users endpoint.
   get:
@@ -568,6 +595,12 @@ types:
       200:
         body:
           type: User[]
+      401:
+        body:
+          application/json:
+            example: {
+                      "message": "UnauthorizedError."
+                     }
   post:
     description: Add a new user.
     securedBy: JWT
