@@ -9,8 +9,6 @@ A solução deve ser implementada dentro da string config no arquivo main.py
 
 ## Tópicos
 
-
-
 Neste desafio você vai aprender:
 
 - Conceitos de integração contínua
