@@ -10,12 +10,12 @@ Esse programa de aceleração conta com o apoio da empresa [Stone](https://www.s
 
 Para acessar os desafios, basta clicar no link correspondente abaixo:
 
-1. [:heavy_check_mark: Módulo I](modulo-I)
-1. [:heavy_check_mark: Módulo II](modulo-II)
-1. [:heavy_check_mark: Módulo III](modulo-III)
-1. [:heavy_check_mark: Módulo IV](modulo-IV)
-1. [:heavy_check_mark: Módulo V](modulo-V)
-1. [:heavy_check_mark: Módulo VI](modulo-VI)
-1. [:heavy_check_mark: Módulo VII](modulo-VII)
-1. [:heavy_check_mark: Módulo VIII](modulo-VIII)
-1. [:heavy_check_mark: Módulo IX](modulo-IX)
+1. [:heavy_check_mark: Módulo 1](modulo-1)
+1. [:heavy_check_mark: Módulo 2](modulo-2)
+1. [:heavy_check_mark: Módulo 3](modulo-3)
+1. [:heavy_check_mark: Módulo 4](modulo-4)
+1. [:heavy_check_mark: Módulo 5](modulo-5)
+1. [:heavy_check_mark: Módulo 6](modulo-6)
+1. [:heavy_check_mark: Módulo 7](modulo-7)
+1. [:heavy_check_mark: Módulo 8](modulo-8)
+1. [:heavy_check_mark: Módulo 9](modulo-9)
