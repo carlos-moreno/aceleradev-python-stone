@@ -15,7 +15,7 @@ pluggy==0.13.1
 PyJWT==1.7.1
 pytest==6.1.1
 pytz==2020.1
-regex==2020.9.27
+regex==2020.10.11
 requests==2.24.0
 six==1.15.0
 sqlparse==0.4.1
