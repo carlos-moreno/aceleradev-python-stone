@@ -13,7 +13,7 @@ pathspec==0.8.1
 py==1.10.0
 pluggy==0.13.1
 PyJWT==2.0.1
-pytest==6.2.2
+pytest==6.2.3
 pytz==2021.1
 regex==2020.11.13
 requests==2.25.1
